@@ -14,7 +14,7 @@ a3 = cv.GaussianBlur(my_image,(9, 9), 6)
 # cv.resizeWindow("a2", 600, 700)
 # cv.namedWindow("a3", cv.WINDOW_NORMAL)
 # cv.resizeWindow("a3", 600, 700)
-#
+
 # cv.imshow("a1", a1)
 # cv.imshow("a2", a2)
 # cv.imshow("a3", a3)
