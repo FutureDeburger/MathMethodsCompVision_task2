@@ -14,6 +14,7 @@ grayscale_src2 = cv.cvtColor(src2, cv.COLOR_BGR2GRAY)
 # cv.waitKey(0)
 # cv.destroyAllWindows()
 
+# 5
 
 # a
 diff12 = cv.absdiff(grayscale_src1, grayscale_src2)
