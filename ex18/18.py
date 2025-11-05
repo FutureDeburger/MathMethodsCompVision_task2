@@ -25,8 +25,7 @@ grad_3 = cv.magnitude(grad_x_3, grad_y_3)
 # Вторая производная (лапласиан)
 lap_3 = cv.filter2D(img, cv.CV_64F, laplacian_3)
 
-# --- Увеличиваем размер ядра: 5×5, 9×9, 13×13 ---
-# Используем встроенный Sobel и Laplacian, потому что самим писать ядра большого размера — мазохизм
+
 for k in [5, 9, 13]:
     sobel_large = cv.Sobel(img, cv.CV_64F, 1, 0, ksize=k)
     lap_large = cv.Laplacian(img, cv.CV_64F, ksize=k)
@@ -34,7 +33,7 @@ for k in [5, 9, 13]:
     cv.imshow(f'Sobel (k={k})', sobel_large)
     cv.imshow(f'Laplacian (k={k})', lap_large)
 
-# Показываем базовые 3x3
+
 cv.imshow('Original', img)
 cv.imshow('Sobel magnitude (3x3)', grad_3)
 cv.imshow('Laplacian (3x3)', lap_3)
