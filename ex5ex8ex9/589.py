@@ -14,6 +14,7 @@ grayscale_src2 = cv.cvtColor(src2, cv.COLOR_BGR2GRAY)
 # cv.waitKey(0)
 # cv.destroyAllWindows()
 
+
 # 5
 
 # a
@@ -27,7 +28,6 @@ cv.imshow("binary_diff_image", binary_diff_image)
 
 
 # c
-# kernel = cv.getStructuringElement(cv.MORPH_RECT,(5, 5))
 without_noise_binary_diff_image = cv.morphologyEx(binary_diff_image, cv.MORPH_OPEN, cv.getStructuringElement(cv.MORPH_RECT,(5, 5)))
 cv.imshow("without_noise_binary_diff_image", without_noise_binary_diff_image)
 
